@@ -1,28 +1,5 @@
-== README
+## Welcome to the Message Mod project!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Online harassment, bullying, and threats are more common every day, and very few laws, tools, or policies exist to curb the growing problem these hate messages present. The detrimental impact on recipients of engaging with hateful and threatening messages is well documented, especially in aggregate. The goal of this project is to give those who experience online harassment and threats a way to catalog and report threats without having to personally engage with threatening speech. This app will accomplish that by allowing a pool of allies to moderate and catalog these messages on behalf of the user.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+To see the roadmap for this app, including wireframes, project brief, and user stories, please visit [the wiki](https://github.com/shawnacscott/pcs_capstone/wiki).
