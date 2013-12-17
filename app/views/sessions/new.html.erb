@@ -2,4 +2,14 @@
 
 <h1>Sign in to Message Mod!</h1>
 
-<h2>Sign in form goes here!</h2>
+<div>
+  <%= form_for(:sessions, url: sessions_path) do |f| %>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.submit 'Sign in' %>
+  <% end %>
+</div>
