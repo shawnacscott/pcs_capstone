@@ -1,11 +1,9 @@
 Capstone::Application.routes.draw do
-  get "/pages/home" 
-  get "/pages/signin"
-  # resources :users
-  # resources :sessions, only: [:new, :create, :destroy, :update]
+  devise_for :users
 
-  # root 'pages#home'
+  root 'pages#home'
 
-  # match '/signup', to: 'users#new',     via: 'get'
-  # match '/signin', to: 'sessions#new',  via: 'get'
+  match '/users/signup', to: 'devise/sessions#new',     via: 'get'
+  match '/users/signin', to: 'devise/sessions#create',  via: 'post'
+  
 end
