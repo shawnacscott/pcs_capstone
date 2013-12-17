@@ -1,10 +1,24 @@
 require 'spec_helper'
 
 describe "Pages" do
-  describe "GET /pages" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get pages_index_path
+
+  describe "Home page" do
+    it "exists" do
+      get root_path
+      response.status.should be(200)
+    end
+  end
+
+  describe "Sign up page" do
+    it "exists" do
+      get signup_path
+      response.status.should be(200)
+    end
+  end
+
+  describe "Sign in page" do
+    it "exists" do
+      get signin_path
       response.status.should be(200)
     end
   end
