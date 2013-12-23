@@ -1,1 +1,34 @@
 @import "bootstrap";
+
+// Color palettes based on American Quilt II (http://www.colourlovers.com/palette/1620931/American_Quilt_II) by Penina (http://www.colourlovers.com/lover/Penina/loveNote) and Beautiful Freak (http://www.colourlovers.com/palette/785323/Beautiful_Freak) by munsteri (http://www.colourlovers.com/lover/munsteri/loveNote) 
+
+// Colors:
+// White: #F5F5F5
+// Charcoal: #544C4A
+// Bright Turquoise: #59A1A1
+// Dark Turquoise: #006666
+// Watermelon Girl: #C13859
+
+html body {
+  background-color: #F5F5F5;
+  color: #544C4A;
+  font-size: 1.6em;
+}
+a {
+  color: #59A1A1;
+  &:hover {
+    color: #006666;
+    text-decoration: none;
+  }
+}
+strong {
+  color: #59A1A1;
+}
+.nav-pills li a {
+  &:hover {
+    border-radius: 4px;
+    background-color: #C13859;
+    color: #F5F5F5;
+  }
+}
+
