@@ -3,5 +3,5 @@ Capstone::Application.routes.draw do
 
   root 'pages#home'
 
-  match '/emails', to: 'emails#create', via: 'post'
+  post '/emails', to: 'emails#create'
 end
