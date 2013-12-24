@@ -5,3 +5,7 @@
   This is the home page for the
   <a href="https://github.com/shawnacscott/pcs_capstone">Message Mod project</a>.
 </h2>
+
+<% if user_signed_in? %>
+  <%= link_to "See all emails", emails_path %>
+<% end %>

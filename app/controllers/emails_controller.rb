@@ -1,6 +1,10 @@
 class EmailsController < ApplicationController
    skip_before_filter :verify_authenticity_token
 
+   def index
+    @emails = Email.all
+   end
+
    def create
      # process various message parameters:
      sender  = params['from']

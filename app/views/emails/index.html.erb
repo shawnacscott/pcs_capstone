@@ -1,0 +1,9 @@
+<h3>All Emails</h3>
+  <% @emails.each do |email| %>
+    <ul>
+      <li>Sender: <%= @emails.sender %></li>
+      <li>Subject: <%= @emails.subject %></li>
+      <li>Body: <%= @emails.actual_body %></li>
+      <li># of Attachments: <%= @emails.count %></li>
+    </ul>
+  <% end %>

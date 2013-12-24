@@ -3,5 +3,6 @@ Capstone::Application.routes.draw do
 
   root 'pages#home'
 
-  post '/emails', to: 'emails#create'
+  post  '/emails', to: 'emails#create'
+  get   '/emails', to: 'emails#index'
 end
