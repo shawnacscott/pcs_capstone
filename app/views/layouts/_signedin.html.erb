@@ -1,0 +1,4 @@
+<p>Logged in as <strong><%= current_user.email %></strong>.</p>
+<nav class="nav nav-pills pull-right">
+  <li><%= link_to "Sign out", destroy_user_session_path, method: :delete  %></li>
+</nav>

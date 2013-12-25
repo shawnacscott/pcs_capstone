@@ -1,9 +1,22 @@
 <h3>All Emails</h3>
-  <% @emails.each do |email| %>
-    <ul>
-      <li>Sender: <%= @emails.sender %></li>
-      <li>Subject: <%= @emails.subject %></li>
-      <li>Body: <%= @emails.actual_body %></li>
-      <li># of Attachments: <%= @emails.count %></li>
-    </ul>
-  <% end %>
+
+<% @emails.each do |email| %>
+  <p>Email</p>
+  <ul>
+    <li>Recipient: <%= email.recipient %></li>
+    <li>Sender: <%= email.sender %></li>
+    <li>From: <%= email.from %></li>
+    <li>Subject: <%= email.subject %></li>
+    <li>Body plain: <%= email.body_plain %></li>
+    <li>Stripped text: <%= email.stripped_text %></li>
+    <li>Stripped signature: <%= email.stripped_signature %></li>
+    <li>Body HTML: <%= email.body_html %></li>
+    <li>Stripped HTML: <%= email.stripped_html %></li>
+    <li>Timestamp: <%= email.timestamp %></li>
+    <li>Token: <%= email.token %></li>
+    <li>Signature: <%= email.signature %></li>
+    <li>Message header: <%= email.message_headers %></li>
+    <li>Content ID map: <%= email.content_id_map %></li>
+    <li># of Attachments: <%= email.attachment_count %></li>
+  </ul>
+<% end %>

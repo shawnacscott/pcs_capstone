@@ -1,13 +1,9 @@
-<div class="header">
+<header>
+    <h1 class="home"><%= link_to "Message Mod", root_path %></h1>
+
     <% if user_signed_in? %>
-      <nav class="nav nav-pills pull-right">
-        <li><%= link_to "Sign out", destroy_user_session_path, method: :delete  %></li>
-      </nav>
-      <p>Logged in as <strong><%= current_user.email %></strong>.</p>
+      <%= render 'layouts/signedin' %>
     <% else %>
-      <nav class="nav nav-pills pull-right">
-        <li><%= link_to "Sign up", new_user_registration_path  %></>
-        <li><%= link_to "Sign in", new_user_session_path  %></>
-      </nav>
+      <%= render 'layouts/notsignedin' %>
     <% end %>
-</div>
+</header>
