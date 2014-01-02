@@ -11,7 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131217225933) do
+ActiveRecord::Schema.define(version: 20140101205002) do
+
+  create_table "admins", force: true do |t|
+    t.string   "name"
+    t.integer  "resource_id"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "admins", ["name", "resource_type", "resource_id"], name: "index_admins_on_name_and_resource_type_and_resource_id"
+  add_index "admins", ["name"], name: "index_admins_on_name"
+
+  create_table "allies", force: true do |t|
+    t.string   "name"
+    t.integer  "resource_id"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "allies", ["name", "resource_type", "resource_id"], name: "index_allies_on_name_and_resource_type_and_resource_id"
+  add_index "allies", ["name"], name: "index_allies_on_name"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -30,5 +52,37 @@ ActiveRecord::Schema.define(version: 20131217225933) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "users_admins", id: false, force: true do |t|
+    t.integer "user_id"
+    t.integer "admin_id"
+  end
+
+  add_index "users_admins", ["user_id", "admin_id"], name: "index_users_admins_on_user_id_and_admin_id"
+
+  create_table "users_allies", id: false, force: true do |t|
+    t.integer "user_id"
+    t.integer "ally_id"
+  end
+
+  add_index "users_allies", ["user_id", "ally_id"], name: "index_users_allies_on_user_id_and_ally_id"
+
+  create_table "users_vips", id: false, force: true do |t|
+    t.integer "user_id"
+    t.integer "vip_id"
+  end
+
+  add_index "users_vips", ["user_id", "vip_id"], name: "index_users_vips_on_user_id_and_vip_id"
+
+  create_table "vips", force: true do |t|
+    t.string   "name"
+    t.integer  "resource_id"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "vips", ["name", "resource_type", "resource_id"], name: "index_vips_on_name_and_resource_type_and_resource_id"
+  add_index "vips", ["name"], name: "index_vips_on_name"
 
 end
