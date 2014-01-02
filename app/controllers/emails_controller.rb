@@ -12,22 +12,22 @@ class EmailsController < ApplicationController
 private
 
   def email_params
-    # process various message parameters:
-    :recipient = params["recipient"]
-    :sender = params["sender"]
-    :from = params["from"]
-    :subject = params["subject"]
-    :body_plain = params["body-plain"]
-    :stripped_text = params["stripped-text"]
-    :stripped_signature = params["stripped-signature"]
-    :body_html = params["body-html"]
-    :stripped_html = params["stripped-html"]
-    :timestamp = params["timestamp"]
-    :token = params["token"]
-    :signature = params["signature"]
-    :message_headers = params["message-headers"]
-    :content_id_map = params["content-id-map"]
-    :attachment_count = params["attachment-count"]
+    # # process various message parameters:
+    # :recipient = params["recipient"]
+    # :sender = params["sender"]
+    # :from = params["from"]
+    # :subject = params["subject"]
+    # :body_plain = params["body-plain"]
+    # :stripped_text = params["stripped-text"]
+    # :stripped_signature = params["stripped-signature"]
+    # :body_html = params["body-html"]
+    # :stripped_html = params["stripped-html"]
+    # :timestamp = params["timestamp"]
+    # :token = params["token"]
+    # :signature = params["signature"]
+    # :message_headers = params["message-headers"]
+    # :content_id_map = params["content-id-map"]
+    # :attachment_count = params["attachment-count"]
 
     params.permit(:recipient, :sender, :from, :subject, :body_plain, :stripped_text, :stripped_signature, :body_html, :stripped_html, :timestamp, :token, :signature, :message_headers, :content_id_map, :attachment_count)
 
