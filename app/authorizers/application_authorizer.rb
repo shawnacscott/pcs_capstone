@@ -8,6 +8,9 @@ class ApplicationAuthorizer < Authority::Authorizer
   # @param [Object] user - whatever represents the current user in your app
   # @return [Boolean]
   def self.default(adjective, user)
+      user.has_role? :admin
+      user.has_role? :ally
+      user.has_role? :vip
     # 'Whitelist' strategy for security: anything not explicitly allowed is
     # considered forbidden.
     false

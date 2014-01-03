@@ -1,9 +1,10 @@
 class User < ActiveRecord::Base
+  # Include default devise modules. Others available are:
+  # :token_authenticatable, :confirmable,
+  # :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
   rolify :role_cname => 'Vip'
   rolify :role_cname => 'Ally'
   rolify :role_cname => 'Admin'
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
 end
