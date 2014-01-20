@@ -7,7 +7,7 @@ class EmailsController < ApplicationController
 
   def create
     # Example of incoming post data from Mailgun and link to example of Rails controller: https://gist.github.com/shawnacscott/8224710
-    @incoming_email = Email.create(email_params)
+    # @incoming_email = Email.create(email_params)
   end
 
 private

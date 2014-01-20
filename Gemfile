@@ -11,6 +11,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'devise'
 gem 'rest-client'
+gem 'figaro'
+gem 'mailman', require: false
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
