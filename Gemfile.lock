@@ -66,6 +66,7 @@ GEM
       cucumber (>= 1.2.0)
       nokogiri (>= 1.5.0)
       rails (>= 3.0.0)
+    daemons (1.1.9)
     devise (3.2.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -242,6 +243,7 @@ DEPENDENCIES
   childprocess
   coffee-rails (~> 4.0.0)
   cucumber-rails
+  daemons
   database_cleaner!
   devise
   factory_girl_rails
@@ -250,6 +252,8 @@ DEPENDENCIES
   guard-spork
   jbuilder (~> 1.2)
   jquery-rails
+  mail
+  maildir
   mailman
   pg
   rails (= 4.0.2)

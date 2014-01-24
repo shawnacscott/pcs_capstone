@@ -3,23 +3,7 @@
 <% @emails.each do |email| %>
   <p>Email</p>
   <ul>
-    <li>Subject: <%= email.subject %></li>
-    <li>Body: <%= email.body_plain %></li>
-    <li>From: <%= email.from %></li>
- <!--    <li>Recipient: <%= email.recipient %></li>
-    <li>Sender: <%= email.sender %></li>
-    <li>From: <%= email.from %></li>
-    <li>Subject: <%= email.subject %></li>
-    <li>Body plain: <%= email.body_plain %></li>
-    <li>Stripped text: <%= email.stripped_text %></li>
-    <li>Stripped signature: <%= email.stripped_signature %></li>
-    <li>Body HTML: <%= email.body_html %></li>
-    <li>Stripped HTML: <%= email.stripped_html %></li>
-    <li>Timestamp: <%= email.timestamp %></li>
-    <li>Token: <%= email.token %></li>
-    <li>Signature: <%= email.signature %></li>
-    <li>Message header: <%= email.message_headers %></li>
-    <li>Content ID map: <%= email.content_id_map %></li>
-    <li># of Attachments: <%= email.attachment_count %></li> -->
+    <li>Testing .raw_source: <%= email.body_plain %></li>
+    <li>Testing .header: <%= email.message_headers %></li>
   </ul>
 <% end %>
