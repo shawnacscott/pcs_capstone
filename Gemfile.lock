@@ -33,6 +33,9 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.1)
     atomic (1.1.14)
+    authority (2.9.0)
+      activesupport (>= 3.0.0)
+      rake (>= 0.8.7)
     bcrypt-ruby (3.1.2)
     bootstrap-sass (3.0.3.0)
       sass (~> 3.2)
@@ -168,6 +171,7 @@ GEM
       json (~> 1.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    rolify (3.2.0)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
@@ -236,6 +240,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  authority
   bcrypt-ruby (= 3.1.2)
   bootstrap-sass
   capybara
@@ -255,6 +260,7 @@ DEPENDENCIES
   rails (= 4.0.2)
   rails_12factor
   rest-client
+  rolify
   rspec-rails
   sass-rails (~> 4.0.0)
   sdoc

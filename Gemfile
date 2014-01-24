@@ -13,6 +13,9 @@ gem 'devise'
 gem 'rest-client'
 gem 'figaro'
 gem 'mailman', require: false
+gem 'rolify'
+gem 'authority'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
