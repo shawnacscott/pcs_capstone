@@ -11,25 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140122023539) do
+ActiveRecord::Schema.define(version: 20140125010815) do
 
   create_table "emails", force: true do |t|
-    t.string  "recipient"
-    t.string  "sender"
-    t.string  "from"
-    t.string  "subject"
-    t.string  "body_plain"
-    t.string  "stripped_text"
-    t.string  "stripped_signature"
-    t.string  "body_html"
-    t.string  "stripped_html"
-    t.integer "attachment_count"
-    t.string  "attachment_x"
-    t.integer "timestamp"
-    t.string  "token"
-    t.string  "signature"
-    t.string  "message_headers"
-    t.string  "content_id_map"
+    t.text     "raw_source"
+    t.text     "original_recipient"
+    t.text     "body"
+    t.text     "headers"
+    t.text     "rating"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
