@@ -3,12 +3,8 @@
 <% @emails.each do |email| %>
   <p>Email</p>
   <ul>
-    <li>Raw Source: <%= email.raw_source %></li>
     <li>Original Recipient: <%= email.original_recipient %></li>
-    <li>Body: <%= email.body %></li>
-    <li>Headers: <%= email.headers %></li>
-    <li>Rating: <%= email.rating %></li>
-    <li>Created At: <%= email.created_at %></li>
-    <li>Updated At: <%= email.updated_at %></li>
+    <li>Subject: <%= email.subject %></li>
+    <li>Body: <%= email.body.html_safe %></li>
   </ul>
 <% end %>

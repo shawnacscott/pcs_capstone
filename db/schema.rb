@@ -11,16 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140125010815) do
+ActiveRecord::Schema.define(version: 20140128054306) do
 
   create_table "emails", force: true do |t|
     t.text     "raw_source"
     t.text     "original_recipient"
     t.text     "body"
-    t.text     "headers"
+    t.text     "header"
     t.text     "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "subject"
   end
 
   create_table "users", force: true do |t|
