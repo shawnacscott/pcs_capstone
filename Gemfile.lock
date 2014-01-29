@@ -248,6 +248,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   figaro
+  guard
   guard-rspec
   guard-spork
   jbuilder (~> 1.2)
